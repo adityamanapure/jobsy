@@ -26,14 +26,19 @@ body {
 .header {
   width: 100%;
   height: 90vh;
-  background-image: url(bg.gif);
-  background-size: cover;
+  background: white;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
 }
+  
+ 
 .nav {
   display: flex;
   width: 100%;
   height: 9rem;
-  color: white;
+  color: black;
 }
 .nav_container {
   width: 100%;
@@ -54,13 +59,13 @@ body {
 }
 .nav_link {
   text-decoration: none;
-  color: #fff;
+  color: black;
 }
 .nav_btn {
   margin-left: 1.5rem;
   padding: 1rem 4rem;
-  background-color: #ffde7f;
-  color: #333;
+  background-color:black;
+  color: white;
   text-decoration: none;
   border-radius: 5px;
 }
@@ -74,7 +79,11 @@ body {
 .header_main_title {
   font-size: 4.8rem;
   line-height: 5rem;
-  color: #fff;
+  color:black;
+  -webkit-text-stroke: 1px white;
+  
+
+  padding-bottom: 1rem;
 }
 .header_p {
   color: #fff;
@@ -82,13 +91,16 @@ body {
 }
 .header_form {
   width: 100%;
-  background-color: #fff;
+  
+  border: 1px solid #333;
+  background-color: white;
   padding: 2.5rem;
   display: flex;
   align-items: center;
   border-radius: 1rem;
   justify-content: space-between;
 }
+
 .header_select {
   border: none;
   outline: none;
@@ -96,8 +108,8 @@ body {
 }
 .header_btn {
   padding: 1.2rem 2.2rem;
-  background-color: #ffde7f;
-  color: #333;
+  background-color:rgb(12, 12, 12);
+  color: white;
   text-decoration: none;
   border-radius: 5px;
   border: none;
@@ -149,8 +161,9 @@ body {
 }
 .featured_card {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
+  border-radius: 1rem;
+  /* border-top-left-radius: 1rem; */
+
 }
 .featured_img {
   width: 100%;
@@ -179,46 +192,22 @@ body {
   padding: 1.5rem;
   border: none;
   outline: none;
-  background-color: #04ade6;
+  background-color:black;
   color: #fff;
-  border-radius: 0.7rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   cursor: pointer;
 }
 
 
 
-/* countries */
-.countries_container {
-  margin-top: 6rem;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
-  grid-gap: 2rem;
-}
-.country > img {
-  width: 100%;
-}
-.country {
-  position: relative;
-}
-.country_content {
-  width: 90%;
-  position: absolute;
-  left: 1.2rem;
-  bottom: 1.2rem;
-  z-index: 99;
-  color: #761a1a;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 /* footer */
 .footer {
   margin-top: 10rem;
   width: 100%;
   text-align: center;
-  background-color: #003b4e;
+  background-color: black;
 }
 .footer_text {
   padding: 1.2rem 0rem;
