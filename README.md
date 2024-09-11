@@ -1,5 +1,5 @@
 # Features:
-### 1. Made with flask to make it fast and efficent
+### 1. Made with **Flask** to make it fast and efficent
 ### 2. Implimented login and logout with sessions 
 ### 3. Connected with database can store and retrieve data from backend 
 ### 4. Secured with password hashing
