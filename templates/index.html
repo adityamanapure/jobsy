@@ -1,0 +1,85 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home &mdash; Job Portal website</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="container nav_container">
+          <h1>JOBSY <a href="{{url_for('home')}}"></a></h1>
+          <ul class="nav_list">
+            
+            <li class="nav_item"><a href="{{url_for('signup')}}" class="nav_btn">Signup</a></li>
+            <li class="nav_item"><a href="{{url_for('login')}}" class="nav_btn">Login</a></li>
+            
+
+          </ul>
+        </div>
+      </nav>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div id="flashModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        {% for category, message in messages %}
+                            <div style="font-weight: bold;" class="alert alert-{{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endwith %}
+     
+      <div class="container">
+        <div class="header_container">
+          <div class="header_wrapper">
+          
+            
+            <h1 class="header_main_title">
+             Find the job that best suits you.
+            </h1>
+            
+            
+            <div class="header_form">
+              
+              
+              <input type="text" id="search" placeholder="Search jobs...">
+              <button class="header_btn">Search</button>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section">
+      <div class="container">
+        <div class="section_header">
+          <h2 class="section_header_title">Latest Featured Jobs</h2>
+          <a href="{{url_for('featured')}}" class="section_header_link">See More &nbsp; &rarr;</a>
+        </div>
+        <div class="features" id="jobs-container">
+          
+          </div>
+        </div>
+      </div>
+    </section>
+   
+  <div id="applyModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <p id="modalMessage"></p>
+      </div>
+  </div>  
+    
+    <footer class="footer">
+      <div class="container">
+        <p class="footer_text">Jobsy All rights reserved 2024</p>
+      </div>
+    </footer>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

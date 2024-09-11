@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobsy Login</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+    <header>
+        <h1>JOBSY<a href="{{url_for('home')}}"></a></h1>
+        <p>Find your dream job today!</p>
+    </header>
+
+    <main>
+        <section id="login-section">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}
+           
+            <h2>Login</h2>
+            {%if error%}
+            <p style="color: red;">{{error}} </p>
+            {%endif%}
+            <form id="login-form" method="POST" action="/login">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="{{url_for('signup')}}">Sign Up</a></li></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jobsy</p>
+    </footer>
+
+    
+
+   
+</body>
+</html>

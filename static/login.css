@@ -1,0 +1,81 @@
+/* Body styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('loginbg.jpg') no-repeat;
+    background-size: cover;
+  }
+  
+  /* Header styles */
+  header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  /* Main content styles */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures content fills viewport height */
+  }
+  
+  /* Login section styles */
+  #login-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Adjust width as needed */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #login-form label {
+    font-weight: bold;
+  }
+  
+  #login-form input[type="email"],
+  #login-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  #login-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  #login-form button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Footer styles */
+  footer {
+    color:white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+
+ 
